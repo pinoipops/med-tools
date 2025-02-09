@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>med-tools by pinoi-popsik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2A2A2A;
+            --secondary: #8B0000;
+            --background: #FFFFFF;
+            --text: #333333;
+        }
+
+        [data-theme="dark"] {
+            --primary: #F5F5F5;
+            --secondary: #FF4444;
+            --background: #121212;
+            --text: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        header {
+            padding: 1.5rem 5%;
+            background-color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-weight: 600;
+            color: var(--secondary);
+            font-size: 1.8rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 5% 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: var(--background);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .app-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .app-content {
+            padding: 1.5rem;
+        }
+
+        .app-title {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .card-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .card-links a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-links a:hover {
+            background-color: var(--primary);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--secondary);
+            color: var(--background);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 5%;
+            color: var(--text);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>med-tools by pinoi-popsik</h1>
+        <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+    </header>
+
+    <div class="hero">
+        <h2 data-aos="fade-up">Clinical Support Reinvented: by pinoi-popsik</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Med-Tools for making workflows easier and more efficient</p>
+    </div>
+
+    <div class="apps-grid">
+        <!-- Paeds Calculator Card -->
+        <div class="app-card" data-aos="fade-up">
+            <img src="images/paeds-dose.png" alt="Paeds Dosage Calculator" class="app-image">
+            <div class="app-content">
+                <h3 class="app-title">Paeds Dosage Calculator</h3>
+                <p>A tool for pediatric weight-based dosing of common medications, featuring a Personalized Regimen Builder that enables the addition of new medications based on age.</p>
+                <div class="card-links">
+                    <a href="https://pinoipops.github.io/paeds-calculator" class="demo-link" target="_blank">Explore Here</a>
+                    <a href="https://github.com/pinoipops/paeds-calculator" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Translator Card -->
+        <div class="app-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/medic-translate.png" alt="Medical Translator" class="app-image">
+            <div class="app-content">
+                <h3 class="app-title">Medical Translator</h3>
+                <p>A web tool to assist patients speaking Bengali, Myanmar, or Nepali in translating their symptoms for English-speaking doctors.</p>
+                <div class="card-links">
+                    <a href="https://pinoipops.github.io/medical-translator" class="demo-link" target="_blank">Explore Here</a>
+                    <a href="https://github.com/pinoipops/medical-translator" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pain Alert Card -->
+        <div class="app-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/pain-alert.png" alt="Pain Alert" class="app-image">
+            <div class="app-content">
+                <h3 class="app-title">Pain Alert</h3>
+                <p>A web app that uses pain scores to tailor management options for Gluteal Pain (Sacroiliitis) and Gastric Pain (Epigastric).</p>
+                <div class="card-links">
+                    <a href="https://pinoipops.github.io/pain-alert" class="demo-link" target="_blank">Explore Here</a>
+                    <a href="https://github.com/pinoipops/pain-alert" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hypertension Management Tools Card -->
+        <div class="app-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/hypertension-tools.png" alt="Hypertension Management Interface" class="app-image">
+            <div class="app-content">
+                <h3 class="app-title">Hypertension Management</h3>
+                <p>Web-based tools for managing hypertension according to Malaysia CPG for Hypertension Management (2018).</p>
+                <div class="card-links">
+                    <a href="https://pinoipops.github.io/hypertension-tools" class="demo-link" target="_blank">Explore Here</a>
+                    <a href="https://github.com/pinoipops/hypertension-tools" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+    <!-- Diabetes Management Tools Card -->
+    <div class="app-card" data-aos="fade-up" data-aos-delay="400">
+        <img src="images/diabetes-tools.png" alt="Diabetes Management Interface" class="app-image">
+        <div class="app-content">
+            <h3 class="app-title">Diabetes Management</h3>
+            <p>Clinical decision support tools for Type 2 Diabetes management following Malaysia T2DM CPG guidelines.</p>
+            <div class="card-links">
+                <a href="https://pinoipops.github.io/diabetes-tools" class="demo-link" target="_blank">Explore Here</a>
+                <a href="https://github.com/pinoipops/diabetes-tools" class="github-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Healthcare Prompts Card -->
+    <div class="app-card" data-aos="fade-up" data-aos-delay="500">
+        <img src="images/prompts.png" alt="Healthcare Prompts" class="app-image">
+        <div class="app-content">
+            <h3 class="app-title">Healthcare Prompts</h3>
+            <p>Prompt for Healthcare Industry</p>
+            <div class="card-links">
+                <a href="https://pinoipops.github.io/healthcare-prompts" class="demo-link" target="_blank">Explore Here</a>
+                <a href="https://github.com/pinoipops/healthcare-prompts" class="github-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer data-aos="fade-up">
+        <p>© 2024 Med-tools by pinoi-popsik.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        });
+
+        // Check saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        if (savedTheme === 'dark') body.classList.add('dark-theme');
+    </script>
+</body>
+</html><!-- ... (remaining footer and scripts stay unchanged) ... -->
